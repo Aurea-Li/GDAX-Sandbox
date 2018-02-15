@@ -6,3 +6,4 @@ References:
 
 
 1. GDAX API: [https://docs.gdax.com/](https://docs.gdax.com/)
+2. "Unofficial" Python Client Library: [https://github.com/danpaquin/gdax-python] (https://github.com/danpaquin/gdax-python)
