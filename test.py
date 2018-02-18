@@ -1,5 +1,6 @@
 import gdax
 import json
+import time
 from AUTH import auth
 
 # API key
@@ -23,6 +24,32 @@ def get_accountsa(i=0):
 def printJSON(JSON):
 	''' Prints JSON object in readable format'''
 	print(json.dumps(JSON, indent=4))
+
+
+class MyWebsocketClient(gdax.WebsocketClient):
+	def on_open(self):
+		self.url = "wss://ws-feed.gdax.com/"
+		self.products = ["BTC-USD", "ETH-USD"]
+
+	def on_message(self, msg):
+		if msg['type'] == 'match':
+			print('Price of %s is %s\n', msg['product_id'], msg['price'])
+			self.current_price = msg['price']
+			
+			
+
+	def on_close(self):
+		print("-- Goodbye! --")
+
+
+wsClient = MyWebsocketClient(products = ['ETH-USD'])
+wsClient.start()
+time.sleep(5)
+
+print(wsClient.current_price())
+wsClient.close()
+
+
 
 # Buying .5 ethereum
 # print(auth.buy(type = 'market', size = '0.5', product_id = 'ETH-USD'))
