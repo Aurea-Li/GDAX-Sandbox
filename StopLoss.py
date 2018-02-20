@@ -1,4 +1,4 @@
-import gdax, json, time
+import gdax, json, datetime
 from AUTH import auth
 global price
 
@@ -25,40 +25,64 @@ def printJSON(JSON):
 	print(json.dumps(JSON, indent=4))
 
 
+
 class MyWebsocketClient(gdax.WebsocketClient):
 	def __init__(self, product_id, stoploss):
-		# Add price variable
 		super(MyWebsocketClient, self).__init__(products = product_id)
-		self.current_price = 0
-		self.max_price = 0
+		self.current_price = 0.0
+		self.max_price = 0.0
+		self.threshold = 0.0
 		self.stoploss = stoploss
+		self.start_time = time.asctime()
+		self.end_time = None
+		
 
 	def on_message(self, msg):
-		threshold = 0
 
 		if msg['type'] == 'match':
-			print(msg['product_id'], msg['price'])
 			self.price = float(msg['price'])
+			text.write(str(self.price) + "\n")
+			printJSON(msg)
 
 			# Update max price if necessary
-			if self.max_price < self.price:
+			if (self.max_price < self.price):	
 				self.max_price = self.price
-				threshold = self.max_price - self.stoploss
-				print("Max price is updated to " + str(self.max_price))
-				print("Threshold is now " + str(threshold))
+				self.threshold = self.max_price - self.stoploss
 
-			# Check if price exceeds stopgap
-			if self.price < threshold:
+				text.write("Max price is updated to " + str(self.max_price) + "\n")
+				text.write("Threshold is now " + str(self.threshold) + "\n")
+
+				# Cancel current stoploss
+
+				# Set new stoploss order
+				
+
+			# Check if price exceeds stoploss threshold
+			if (self.price <= self.threshold):
+
+				text.write("-- Stoploss triggered at " + str(self.price))
+				text.close()
 				self.stop = True
-				print("-- Stoploss triggered at " + str(self.price))
+
+
 
 			
 	def on_close(self):
 		print("-- Websocket Closing --")
+		self.end_time = time.clock()
+		print('Total time = ' + str(self.end_time - self.start_time))
 
 
-wsClient = MyWebsocketClient(product_id = 'BTC-USD', stoploss = .02)
+# Writing output to text file
+start = time.clock()
+text = open('Output.txt', "w")
+
+wsClient = MyWebsocketClient(product_id = 'BTC-USD', stoploss = 0.01)
 wsClient.start()
+
+print(time.asctime())
+
+
 
 
 
@@ -69,6 +93,5 @@ wsClient.start()
 # print(auth.sell(price = '5000', size = '0.5', product_id = 'BTC-USD'))
 # printJSON(auth.get_orders())
 # printJSON(auth.get_accounts())
-
 
 
