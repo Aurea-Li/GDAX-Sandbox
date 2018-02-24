@@ -33,9 +33,9 @@ class TrailingStopLoss(gdax.WebsocketClient):
 		super(TrailingStopLoss, self).__init__(products = product_id)
 		self.current_price = 0.0
 		self.max_price = 0.0
-		self.threshold = 0.0
+		self.threshold = ''
 		self.stoploss = stoploss
-		self.message_count = 0
+		self.first = True
 		self.quantity = quantity
 		self.current_orderID = None
 
@@ -56,48 +56,36 @@ class TrailingStopLoss(gdax.WebsocketClient):
 
 			# Update real time price
 			self.price = float(msg['price'])
-			text.write(str(self.price) + "\n")
 
+			text.write(str(self.price) + "\n")
 			print(self.price)
 
 			# If first message
-			if self.message_count == 0:
+			if self.first:
 
 				# Save datetime 
 				self.start_datetime = msg['time']
 
+			# Updating max price
+			if self.max_price < self.price:
+
 				# Set max price and threshold
 				self.max_price = self.price
-				self.threshold = self.max_price - self.stoploss
+				threshold = str(self.max_price - self.stoploss)
+
+				# Truncate threshold to fit GDAX requirements
+				self.threshold = threshold[: (threshold.find('.') + 3)]
 
 				text.write("Max price is updated to " + str(self.max_price) + "\n")
-				text.write("Threshold is now " + str(self.threshold) + "\n")
+				text.write("Threshold is now " + self.threshold + "\n")
 
-				# Initialize stoploss order
-				order = self.authenticated.sell(price=str(
-					self.threshold), size=str(self.quantity), product_id=self.product_id)
+				if not self.first:
 
-				printJSON(order)
-				
-				# Save order ID
-				self.current_orderID = order['id']
+					# Cancel current stoploss
+					self.authenticated.cancel_order(self.current_orderID)
+					text.write("Old order canceled, id: " + self.current_orderID)
 
-				print("New order ID: "+ self.current_orderID)
-
-
-			# Update max price and threshold if necessary
-			if (self.max_price < self.price):
-				self.max_price = self.price
-				self.threshold = self.max_price - self.stoploss
-
-				text.write("Max price is updated to " + str(self.max_price) + "\n")
-				text.write("Threshold is now " + str(self.threshold) + "\n")
-
-				# Cancel current stoploss
-				self.authenticated.cancel_order(self.current_orderID)
-				text.write("Old order canceled, id: " + self.current_orderID)
-
-				print("Old order canceled, id: " + self.current_orderID)
+					print("Old order canceled, id: " + self.current_orderID)
 
 				# Initialize stoploss order
 				order = self.authenticated.sell(price=str(
@@ -113,7 +101,7 @@ class TrailingStopLoss(gdax.WebsocketClient):
 				
 
 			# Check if price exceeds stoploss threshold
-			if (self.price <= self.threshold):
+			if self.price <= float(self.threshold):
 
 				text.write("-- Stoploss triggered at " + str(self.price) + "\n")
 				text.write("Starting time: " + self.start_datetime + "\n")
@@ -123,9 +111,11 @@ class TrailingStopLoss(gdax.WebsocketClient):
 				# Close websocket
 				self.stop = True
 
-			# Update message count and final datetime
-			self.message_count += 1
+			# Update final datetime
 			self.end_datetime = msg['time']
+
+			# Set first boolean to false at end of iteration
+			self.first = False
 
 			
 	def on_close(self):
@@ -135,13 +125,18 @@ class TrailingStopLoss(gdax.WebsocketClient):
 
 # Writing output to text file
 
-# text = open('Output.txt', "w")
+text = open('Output.txt', "w")
 
-# wsClient = TrailingStopLoss(product_id = 'ETH-USD', stoploss = 0.02, quantity = 1)
-# wsClient.start()
+wsClient = TrailingStopLoss(product_id = 'ETH-USD', stoploss = 0.02, quantity = 1)
+wsClient.start()
 
+# first = True
 
+# if first:
+# 	print('yes')
 
+# if not first:
+# 	print('no')
 
 # Buying .5 ethereum
 # auth.buy(type = 'market', size = '1', product_id = 'ETH-USD')
