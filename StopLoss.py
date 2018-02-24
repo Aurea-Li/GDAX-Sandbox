@@ -57,9 +57,6 @@ class TrailingStopLoss(gdax.WebsocketClient):
 			# Update real time price
 			self.price = float(msg['price'])
 
-			text.write(str(self.price) + "\n")
-			print(self.price)
-
 			# If first message
 			if self.first:
 
@@ -83,21 +80,19 @@ class TrailingStopLoss(gdax.WebsocketClient):
 
 					# Cancel current stoploss
 					self.authenticated.cancel_order(self.current_orderID)
-					text.write("Old order canceled, id: " + self.current_orderID)
+					text.write("Old order canceled, id: " + self.current_orderID + "\n")
 
-					print("Old order canceled, id: " + self.current_orderID)
+					print("Old order canceled, id: " + self.current_orderID + "\n")
 
 				# Initialize stoploss order
-				order = self.authenticated.sell(price=str(
+				order = self.authenticated.sell(stop = 'loss', stop_price=str(
 					self.threshold), size=str(self.quantity), product_id=self.product_id)
-
-				printJSON(order)
 
 				# Save order ID
 				self.current_orderID = order['id']
-				text.write("New order set, id: " + self.current_orderID)
+				text.write("New order set, id: " + self.current_orderID + "\n")
 
-				print("New order ID: " + self.current_orderID)
+				print("New order ID: " + self.current_orderID + "\n")
 				
 
 			# Check if price exceeds stoploss threshold
@@ -125,10 +120,10 @@ class TrailingStopLoss(gdax.WebsocketClient):
 
 # Writing output to text file
 
-text = open('Output.txt', "w")
+# text = open('Output.txt', "w")
 
-wsClient = TrailingStopLoss(product_id = 'ETH-USD', stoploss = 0.02, quantity = 1)
-wsClient.start()
+# wsClient = TrailingStopLoss(product_id = 'ETH-USD', stoploss = 0.02, quantity = 1)
+# wsClient.start()
 
 # first = True
 
@@ -140,8 +135,10 @@ wsClient.start()
 
 # Buying .5 ethereum
 # auth.buy(type = 'market', size = '1', product_id = 'ETH-USD')
-# print(auth.sell(price = '5000', size = '0.5', product_id = 'BTC-USD'))
+auth = auth()
+print(auth.buy(stop = 'loss', stop_price = '1', size = '0.5', product_id = 'LTC-USD', price = '1'))
 # printJSON(auth.get_orders())
 # printJSON(auth.get_accounts())
 
 
+'''Main issue right now is figuring out how to get the SELL to trigger if the real time price goes BELOW the price specified in the order'''
