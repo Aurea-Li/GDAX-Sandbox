@@ -1,50 +1,26 @@
 import gdax, json
 from AUTH import auth
-global price
-
-# API key
-API = auth()
-
-public = gdax.PublicClient()
-
-def get_products(currency='USD'):
-	'''Modify JSON object get_products to get quotes in various currencies
-	Default behavior: USD
-	Options: BTC, USD, GBR, EUR
-	'''
-	return [products for products in public.get_products() if products['quote_currency'] == currency.upper()]
-
-def get_accounts(i=0):
-	''' Default behavior: Return account inventory if balance is greater than 0
-	Options: -1 to return all, else i'''
-	return [item for item in auth.get_accounts() if float(item['balance']) > i]
-
-
-def printJSON(JSON):
-	''' Prints JSON object in readable format'''
-	print(json.dumps(JSON, indent=4))
-
-
 
 class TrailingStopLoss(gdax.WebsocketClient):
 	''' Function that allows you to place a sell trailing stop loss
 		orders in real time using a constant spread. '''
 	def __init__(self, product_id, stoploss, quantity):
 		super(TrailingStopLoss, self).__init__(products = product_id)
+
+		# Setting stop loss attributes
 		self.current_price = 0.0
 		self.max_price = 0.0
 		self.threshold = ''
 		self.stoploss = stoploss
-		self.first = True
 		self.quantity = quantity
 		self.current_orderID = None
+		self.product_id = product_id
+		self.first = True
 
+		# Authenticating access to buying/selling 
 		self.authenticated = auth()
 
-		self.product_id = product_id
-
-
-
+		# Timestamp beginning and end of stoploss 
 		self.start_datetime = None
 		self.end_datetime = None
 		
@@ -76,9 +52,8 @@ class TrailingStopLoss(gdax.WebsocketClient):
 
 					# Cancel current stoploss
 					self.authenticated.cancel_order(self.current_orderID)
+					
 					text.write("Old order canceled, id: " + self.current_orderID + "\n")
-
-					print("Old order canceled, id: " + self.current_orderID + "\n")
 
 				# Initialize stoploss order
 				order = self.authenticated.sell(stop = 'loss', stop_price=str(self.threshold),
@@ -86,10 +61,8 @@ class TrailingStopLoss(gdax.WebsocketClient):
 
 				# Save order ID
 				self.current_orderID = order['id']
-				text.write("New order set, id: " + self.current_orderID + "\n")
 
-				print("New order ID: " + self.current_orderID + "\n")
-				
+				text.write("New order set, id: " + self.current_orderID + "\n")
 
 			# Check if price exceeds stoploss threshold
 			if self.price <= float(self.threshold):
@@ -114,18 +87,12 @@ class TrailingStopLoss(gdax.WebsocketClient):
 
 
 
-			
-	def on_close(self):
-		print("-- Websocket Closing --")
-
-
-
 # Writing output to text file
+text = open('Output.txt', "w")
 
-# text = open('Output.txt', "w")
-
-# wsClient = TrailingStopLoss(product_id = 'BTC-USD', stoploss = 0.02, quantity = 0.5)
-# wsClient.start()
+# Initializing and starting the Trailing Stop Loss
+wsClient = TrailingStopLoss(product_id = 'BTC-USD', stoploss = 0.02, quantity = 0.5)
+wsClient.start()
 
 
 

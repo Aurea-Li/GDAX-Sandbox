@@ -1,0 +1,356 @@
+Current price: 9706.52000000
+Max price is updated to 9706.52
+Threshold is now 9706.5
+New order set, id: 68de1917-e584-445a-879a-f3f26f55e08a
+Current price: 9707.00000000
+Max price is updated to 9707.0
+Threshold is now 9706.98
+Old order canceled, id: 68de1917-e584-445a-879a-f3f26f55e08a
+New order set, id: f1954804-f632-40d5-bd28-3040b1c15ed5
+Current price: 9707.00000000
+Current price: 9706.99000000
+Current price: 9707.00000000
+Current price: 9707.00000000
+Current price: 9706.99000000
+Current price: 9707.00000000
+Current price: 9707.00000000
+Current price: 9707.00000000
+Current price: 9707.00000000
+Current price: 9708.00000000
+Max price is updated to 9708.0
+Threshold is now 9707.98
+Old order canceled, id: f1954804-f632-40d5-bd28-3040b1c15ed5
+New order set, id: e7b86c65-d6be-4e8e-96d7-e11a075ba931
+Current price: 9708.00000000
+Current price: 9708.88000000
+Max price is updated to 9708.88
+Threshold is now 9708.85
+Old order canceled, id: e7b86c65-d6be-4e8e-96d7-e11a075ba931
+New order set, id: b6b40747-9419-4609-af13-457cdb55e19c
+Current price: 9710.00000000
+Max price is updated to 9710.0
+Threshold is now 9709.98
+Old order canceled, id: b6b40747-9419-4609-af13-457cdb55e19c
+New order set, id: 3cffcbe5-fe98-479a-b446-0c54d373d362
+Current price: 9710.00000000
+Current price: 9710.00000000
+Current price: 9710.00000000
+Current price: 9711.33000000
+Max price is updated to 9711.33
+Threshold is now 9711.31
+Old order canceled, id: 3cffcbe5-fe98-479a-b446-0c54d373d362
+New order set, id: cc6f040e-676d-4e4c-b59c-6937d01b14f3
+Current price: 9712.06000000
+Max price is updated to 9712.06
+Threshold is now 9712.03
+Old order canceled, id: cc6f040e-676d-4e4c-b59c-6937d01b14f3
+New order set, id: 15f1cefb-376b-48b0-9f40-b03b5d95923c
+Current price: 9713.00000000
+Max price is updated to 9713.0
+Threshold is now 9712.98
+Old order canceled, id: 15f1cefb-376b-48b0-9f40-b03b5d95923c
+New order set, id: b4b5f00e-e867-4cca-ad63-6b5403798f62
+Current price: 9714.00000000
+Max price is updated to 9714.0
+Threshold is now 9713.98
+Old order canceled, id: b4b5f00e-e867-4cca-ad63-6b5403798f62
+New order set, id: d6f1a24a-30ba-42eb-88d9-529bc59c3da0
+Current price: 9714.00000000
+Current price: 9714.00000000
+Current price: 9715.37000000
+Max price is updated to 9715.37
+Threshold is now 9715.35
+Old order canceled, id: d6f1a24a-30ba-42eb-88d9-529bc59c3da0
+New order set, id: 8ab9abc7-0ca4-4f0b-b614-08642a3a8b34
+Current price: 9716.85000000
+Max price is updated to 9716.85
+Threshold is now 9716.83
+Old order canceled, id: 8ab9abc7-0ca4-4f0b-b614-08642a3a8b34
+New order set, id: df1546f0-fa42-4145-954e-8db1c43ad302
+Current price: 9717.14000000
+Max price is updated to 9717.14
+Threshold is now 9717.11
+Old order canceled, id: df1546f0-fa42-4145-954e-8db1c43ad302
+New order set, id: 6f1245bc-6ff0-4c7a-b271-3c40f37242db
+Current price: 9718.06000000
+Max price is updated to 9718.06
+Threshold is now 9718.03
+Old order canceled, id: 6f1245bc-6ff0-4c7a-b271-3c40f37242db
+New order set, id: 129a8038-4071-49c9-8413-e97090e10d1c
+Current price: 9719.00000000
+Max price is updated to 9719.0
+Threshold is now 9718.98
+Old order canceled, id: 129a8038-4071-49c9-8413-e97090e10d1c
+New order set, id: 2580df55-e417-42f3-abfe-8a4a86b27b6d
+Current price: 9719.00000000
+Current price: 9719.47000000
+Max price is updated to 9719.47
+Threshold is now 9719.44
+Old order canceled, id: 2580df55-e417-42f3-abfe-8a4a86b27b6d
+New order set, id: 3bcf66a2-2ba1-431c-a3a1-21c1bc1b0cc6
+Current price: 9719.70000000
+Max price is updated to 9719.7
+Threshold is now 9719.68
+Old order canceled, id: 3bcf66a2-2ba1-431c-a3a1-21c1bc1b0cc6
+New order set, id: 10e308fd-f9a4-4b21-9a8b-1120c6a35526
+Current price: 9719.70000000
+Current price: 9719.99000000
+Max price is updated to 9719.99
+Threshold is now 9719.97
+Old order canceled, id: 10e308fd-f9a4-4b21-9a8b-1120c6a35526
+New order set, id: 8ac46091-6ee6-4a32-8282-9ab16978ac6e
+Current price: 9719.99000000
+Current price: 9719.99000000
+Current price: 9720.00000000
+Max price is updated to 9720.0
+Threshold is now 9719.98
+Old order canceled, id: 8ac46091-6ee6-4a32-8282-9ab16978ac6e
+New order set, id: ad53ba3a-9a32-475d-832b-978777f4e0e2
+Current price: 9720.00000000
+Current price: 9720.00000000
+Current price: 9720.00000000
+Current price: 9720.00000000
+Current price: 9720.01000000
+Max price is updated to 9720.01
+Threshold is now 9719.99
+Old order canceled, id: ad53ba3a-9a32-475d-832b-978777f4e0e2
+New order set, id: 5baaf9bb-91a9-4c1c-897d-122454a11311
+Current price: 9720.01000000
+Current price: 9720.36000000
+Max price is updated to 9720.36
+Threshold is now 9720.34
+Old order canceled, id: 5baaf9bb-91a9-4c1c-897d-122454a11311
+New order set, id: 10d4dbdd-2763-4d3f-a64e-d60100f69bc9
+Current price: 9720.68000000
+Max price is updated to 9720.68
+Threshold is now 9720.66
+Old order canceled, id: 10d4dbdd-2763-4d3f-a64e-d60100f69bc9
+New order set, id: e40e378b-bb81-4463-8f5c-4ff0af96bbdb
+Current price: 9721.00000000
+Max price is updated to 9721.0
+Threshold is now 9720.98
+Old order canceled, id: e40e378b-bb81-4463-8f5c-4ff0af96bbdb
+New order set, id: 22ed564d-bc47-463d-a507-4921de6c658f
+Current price: 9721.07000000
+Max price is updated to 9721.07
+Threshold is now 9721.05
+Old order canceled, id: 22ed564d-bc47-463d-a507-4921de6c658f
+New order set, id: aa699fe1-d4d4-4266-bb39-61732d10cb93
+Current price: 9721.26000000
+Max price is updated to 9721.26
+Threshold is now 9721.24
+Old order canceled, id: aa699fe1-d4d4-4266-bb39-61732d10cb93
+New order set, id: 29a83c14-5cc2-4080-aaf2-e2260f8cb83d
+Current price: 9721.84000000
+Max price is updated to 9721.84
+Threshold is now 9721.82
+Old order canceled, id: 29a83c14-5cc2-4080-aaf2-e2260f8cb83d
+New order set, id: 16bd53ea-75af-4666-b8e8-df4038b948e4
+Current price: 9721.84000000
+Current price: 9722.46000000
+Max price is updated to 9722.46
+Threshold is now 9722.43
+Old order canceled, id: 16bd53ea-75af-4666-b8e8-df4038b948e4
+New order set, id: 1016df44-9724-49ff-95ea-391ad37f67c2
+Current price: 9722.97000000
+Max price is updated to 9722.97
+Threshold is now 9722.94
+Old order canceled, id: 1016df44-9724-49ff-95ea-391ad37f67c2
+New order set, id: fbe46c21-c22f-4d1d-9898-5b3cdf2bbec7
+Current price: 9722.97000000
+Current price: 9723.03000000
+Max price is updated to 9723.03
+Threshold is now 9723.01
+Old order canceled, id: fbe46c21-c22f-4d1d-9898-5b3cdf2bbec7
+New order set, id: 25364f2b-e84c-4449-bd17-b99ae592db4e
+Current price: 9723.34000000
+Max price is updated to 9723.34
+Threshold is now 9723.32
+Old order canceled, id: 25364f2b-e84c-4449-bd17-b99ae592db4e
+New order set, id: b8d85e45-6d9a-48b4-944a-1a9c99ffdf6e
+Current price: 9723.47000000
+Max price is updated to 9723.47
+Threshold is now 9723.44
+Old order canceled, id: b8d85e45-6d9a-48b4-944a-1a9c99ffdf6e
+New order set, id: 8c4ed219-2311-4bc1-a9dd-30d136ab1ab9
+Current price: 9723.47000000
+Current price: 9723.62000000
+Max price is updated to 9723.62
+Threshold is now 9723.6
+Old order canceled, id: 8c4ed219-2311-4bc1-a9dd-30d136ab1ab9
+New order set, id: a0ca00b8-a9de-4fb9-96d1-ebf734d1846f
+Current price: 9723.63000000
+Max price is updated to 9723.63
+Threshold is now 9723.60
+Old order canceled, id: a0ca00b8-a9de-4fb9-96d1-ebf734d1846f
+New order set, id: 7b5a5f8f-80a1-4d4c-bb5c-e0f2ba37689f
+Current price: 9723.77000000
+Max price is updated to 9723.77
+Threshold is now 9723.75
+Old order canceled, id: 7b5a5f8f-80a1-4d4c-bb5c-e0f2ba37689f
+New order set, id: 99f05196-54fe-437e-adec-92250fa721c1
+Current price: 9724.00000000
+Max price is updated to 9724.0
+Threshold is now 9723.98
+Old order canceled, id: 99f05196-54fe-437e-adec-92250fa721c1
+New order set, id: 8f3a932a-5b6d-4598-8130-36383798da84
+Current price: 9724.00000000
+Current price: 9724.02000000
+Max price is updated to 9724.02
+Threshold is now 9724.0
+Old order canceled, id: 8f3a932a-5b6d-4598-8130-36383798da84
+New order set, id: 1f91e779-69be-4a61-951f-25f0a5acaf86
+Current price: 9724.24000000
+Max price is updated to 9724.24
+Threshold is now 9724.22
+Old order canceled, id: 1f91e779-69be-4a61-951f-25f0a5acaf86
+New order set, id: e9446eb4-50cb-43f7-9239-d1d038e7ea09
+Current price: 9724.32000000
+Max price is updated to 9724.32
+Threshold is now 9724.3
+Old order canceled, id: e9446eb4-50cb-43f7-9239-d1d038e7ea09
+New order set, id: 2824ae83-7de5-453e-80bc-9fff6fe61ffa
+Current price: 9724.32000000
+Current price: 9724.70000000
+Max price is updated to 9724.7
+Threshold is now 9724.68
+Old order canceled, id: 2824ae83-7de5-453e-80bc-9fff6fe61ffa
+New order set, id: 6c036381-258a-459a-bed5-356131da8309
+Current price: 9724.99000000
+Max price is updated to 9724.99
+Threshold is now 9724.97
+Old order canceled, id: 6c036381-258a-459a-bed5-356131da8309
+New order set, id: 8ce78625-8e6a-441d-bfcf-0e2ee39825a4
+Current price: 9725.00000000
+Max price is updated to 9725.0
+Threshold is now 9724.98
+Old order canceled, id: 8ce78625-8e6a-441d-bfcf-0e2ee39825a4
+New order set, id: d6b790c7-ccbd-4477-acd2-c3a42f3a131a
+Current price: 9725.00000000
+Current price: 9725.00000000
+Current price: 9725.00000000
+Current price: 9725.00000000
+Current price: 9725.00000000
+Current price: 9725.00000000
+Current price: 9725.30000000
+Max price is updated to 9725.3
+Threshold is now 9725.27
+Old order canceled, id: d6b790c7-ccbd-4477-acd2-c3a42f3a131a
+New order set, id: 842e4779-d595-441d-9f5b-84701ef5330f
+Current price: 9725.41000000
+Max price is updated to 9725.41
+Threshold is now 9725.39
+Old order canceled, id: 842e4779-d595-441d-9f5b-84701ef5330f
+New order set, id: bcbf387b-e3b0-41c8-bbb1-49f41cf1e440
+Current price: 9725.48000000
+Max price is updated to 9725.48
+Threshold is now 9725.46
+Old order canceled, id: bcbf387b-e3b0-41c8-bbb1-49f41cf1e440
+New order set, id: 0e22863e-88e2-43d6-9214-630b665975c1
+Current price: 9725.48000000
+Current price: 9726.00000000
+Max price is updated to 9726.0
+Threshold is now 9725.98
+Old order canceled, id: 0e22863e-88e2-43d6-9214-630b665975c1
+New order set, id: 893795c5-4ddb-4ad9-b51e-6e36009c27d4
+Current price: 9726.00000000
+Current price: 9726.00000000
+Current price: 9726.00000000
+Current price: 9726.00000000
+Current price: 9726.00000000
+Current price: 9726.83000000
+Max price is updated to 9726.83
+Threshold is now 9726.81
+Old order canceled, id: 893795c5-4ddb-4ad9-b51e-6e36009c27d4
+New order set, id: da1ca5ec-dc08-47e7-87e3-66c934118082
+Current price: 9726.83000000
+Current price: 9726.83000000
+Current price: 9726.83000000
+Current price: 9727.47000000
+Max price is updated to 9727.47
+Threshold is now 9727.44
+Old order canceled, id: da1ca5ec-dc08-47e7-87e3-66c934118082
+New order set, id: 9d927e60-3cce-4782-800e-d9142e6f7e50
+Current price: 9727.47000000
+Current price: 9727.47000000
+Current price: 9727.47000000
+Current price: 9727.49000000
+Max price is updated to 9727.49
+Threshold is now 9727.47
+Old order canceled, id: 9d927e60-3cce-4782-800e-d9142e6f7e50
+New order set, id: 5b0d452c-5180-4a09-aa62-76b448a535a9
+Current price: 9727.49000000
+Current price: 9728.06000000
+Max price is updated to 9728.06
+Threshold is now 9728.03
+Old order canceled, id: 5b0d452c-5180-4a09-aa62-76b448a535a9
+New order set, id: 4f775aa9-f9b5-4206-a910-080403aee7ab
+Current price: 9728.35000000
+Max price is updated to 9728.35
+Threshold is now 9728.33
+Old order canceled, id: 4f775aa9-f9b5-4206-a910-080403aee7ab
+New order set, id: 5cf53e9e-c851-44b5-b340-e9585d74d257
+Current price: 9728.35000000
+Current price: 9728.84000000
+Max price is updated to 9728.84
+Threshold is now 9728.82
+Old order canceled, id: 5cf53e9e-c851-44b5-b340-e9585d74d257
+New order set, id: 3d9b285c-af86-4346-b969-f818f919f68e
+Current price: 9729.00000000
+Max price is updated to 9729.0
+Threshold is now 9728.98
+Old order canceled, id: 3d9b285c-af86-4346-b969-f818f919f68e
+New order set, id: ccaee8f1-7030-4c39-9655-bc38d087774f
+Current price: 9729.00000000
+Current price: 9729.93000000
+Max price is updated to 9729.93
+Threshold is now 9729.91
+Old order canceled, id: ccaee8f1-7030-4c39-9655-bc38d087774f
+New order set, id: 94b4476b-f833-4f9d-bb9d-dff3bdc8b251
+Current price: 9729.95000000
+Max price is updated to 9729.95
+Threshold is now 9729.93
+Old order canceled, id: 94b4476b-f833-4f9d-bb9d-dff3bdc8b251
+New order set, id: c705a569-1bcc-48ab-a064-7bf908844f5d
+Current price: 9730.00000000
+Max price is updated to 9730.0
+Threshold is now 9729.98
+Old order canceled, id: c705a569-1bcc-48ab-a064-7bf908844f5d
+New order set, id: 6d610519-6008-483d-b776-5f39d7c8e2c7
+Current price: 9730.00000000
+Current price: 9730.00000000
+Current price: 9730.00000000
+Current price: 9730.00000000
+Current price: 9730.00000000
+Current price: 9730.01000000
+Max price is updated to 9730.01
+Threshold is now 9729.99
+Old order canceled, id: 6d610519-6008-483d-b776-5f39d7c8e2c7
+New order set, id: c402d0ef-ab5f-4bbf-968a-317fab339945
+Current price: 9730.01000000
+Current price: 9730.08000000
+Max price is updated to 9730.08
+Threshold is now 9730.06
+Old order canceled, id: c402d0ef-ab5f-4bbf-968a-317fab339945
+New order set, id: cfb8bf0e-0994-4c01-b08e-24325b221d17
+Current price: 9730.54000000
+Max price is updated to 9730.54
+Threshold is now 9730.52
+Old order canceled, id: cfb8bf0e-0994-4c01-b08e-24325b221d17
+New order set, id: acfb7419-3809-4259-8935-813364430acc
+Current price: 9730.61000000
+Max price is updated to 9730.61
+Threshold is now 9730.59
+Old order canceled, id: acfb7419-3809-4259-8935-813364430acc
+New order set, id: 62b1a4ff-0f6e-4292-97f2-4d05096e0889
+Current price: 9730.60000000
+Current price: 9730.60000000
+Current price: 9730.60000000
+Current price: 9730.60000000
+Current price: 9730.60000000
+Current price: 9730.60000000
+Current price: 9730.60000000
+Current price: 9730.59000000
+-- Stoploss triggered at 9730.59
+Starting time: 2018-02-25T04:16:03.373000Z
+Ending time: 2018-02-25T04:18:30.655000Z
