@@ -57,11 +57,7 @@ class TrailingStopLoss(gdax.WebsocketClient):
 			# Update real time price
 			self.price = float(msg['price'])
 
-			# If first message
-			if self.first:
-
-				# Save datetime 
-				self.start_datetime = msg['time']
+			text.write("Current price: " + msg['price'] + "\n")
 
 			# Updating max price
 			if self.max_price < self.price:
@@ -85,8 +81,8 @@ class TrailingStopLoss(gdax.WebsocketClient):
 					print("Old order canceled, id: " + self.current_orderID + "\n")
 
 				# Initialize stoploss order
-				order = self.authenticated.sell(stop = 'loss', stop_price=str(
-					self.threshold), size=str(self.quantity), product_id=self.product_id)
+				order = self.authenticated.sell(stop = 'loss', stop_price=str(self.threshold),
+				price = str(self.threshold), size=str(self.quantity), product_id=self.product_id)
 
 				# Save order ID
 				self.current_orderID = order['id']
@@ -106,11 +102,17 @@ class TrailingStopLoss(gdax.WebsocketClient):
 				# Close websocket
 				self.stop = True
 
+			# If first message
+			if self.first:
+
+				# Save datetime
+				self.start_datetime = msg['time']
+				self.first = False
+
 			# Update final datetime
 			self.end_datetime = msg['time']
 
-			# Set first boolean to false at end of iteration
-			self.first = False
+
 
 			
 	def on_close(self):
@@ -122,23 +124,11 @@ class TrailingStopLoss(gdax.WebsocketClient):
 
 # text = open('Output.txt', "w")
 
-# wsClient = TrailingStopLoss(product_id = 'ETH-USD', stoploss = 0.02, quantity = 1)
+# wsClient = TrailingStopLoss(product_id = 'BTC-USD', stoploss = 0.02, quantity = 0.5)
 # wsClient.start()
 
-# first = True
-
-# if first:
-# 	print('yes')
-
-# if not first:
-# 	print('no')
-
-# Buying .5 ethereum
-# auth.buy(type = 'market', size = '1', product_id = 'ETH-USD')
-auth = auth()
-print(auth.buy(stop = 'loss', stop_price = '1', size = '0.5', product_id = 'LTC-USD', price = '1'))
-# printJSON(auth.get_orders())
-# printJSON(auth.get_accounts())
 
 
-'''Main issue right now is figuring out how to get the SELL to trigger if the real time price goes BELOW the price specified in the order'''
+
+
+
